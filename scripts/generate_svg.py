@@ -63,11 +63,6 @@ def render_svg(username, user, summary):
     now = datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')
     top_langs_str = ', '.join(f'{l} ({c})' for l, c in summary['top_langs'])
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
-        <style>
-            .title{{font: 700 16px/1.2 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;}}
-            .meta{{font: 400 12px/1.2 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; fill:#9aa0a6}}
-            .stat{{font: 700 20px/1.2 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;}}
-        </style>
         <rect width="100%" height="100%" rx="6" fill="#0f172a" />
         <g transform="translate(20,20)">
             <text x="0" y="0" class="title" fill="#8be9fd">{username}</text>
