@@ -91,8 +91,11 @@ def main():
         repos = fetch_repos(USERNAME)
         summary = summarize(repos)
         svg = render_svg(USERNAME, user, summary)
+        svg = svg.lstrip().replace('\ufeff', '')
+
         with open('stats.svg', 'w', encoding='utf-8') as f:
             f.write(svg)
+
         print('stats.svg generated')
     except Exception as e:
         print('Error:', e)
