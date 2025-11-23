@@ -65,16 +65,16 @@ def render_svg(username, user, summary):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
         <rect width="100%" height="100%" rx="6" fill="#0f172a" />
         <g transform="translate(20,20)">
-            <text x="0" y="0" class="title" fill="#8be9fd">{username}</text>
-            <text x="0" y="22" class="meta">{user.get('name','') or ''} &#8226; {user.get('bio','') or ''}</text>
+            <text x="0" y="0" fill="#8be9fd">{username}</text>
+            <text x="0" y="22">{user.get('name','') or ''} &#8226; {user.get('bio','') or ''}</text>
 
             <g transform="translate(0,48)">
-                <text x="0" y="0" class="stat" fill="#ffffff">Stars: {summary['stars']}</text>
-                <text x="160" y="0" class="stat" fill="#ffffff">Repos: {summary['repos']}</text>
-                <text x="320" y="0" class="stat" fill="#ffffff">Forks: {summary['forks']}</text>
+                <text x="0" y="0" fill="#ffffff">Stars: {summary['stars']}</text>
+                <text x="160" y="0" fill="#ffffff">Repos: {summary['repos']}</text>
+                <text x="320" y="0" fill="#ffffff">Forks: {summary['forks']}</text>
 
-                <text x="0" y="28" class="meta">Top languages: {top_langs_str}</text>
-                <text x="0" y="46" class="meta">Followers: {user.get('followers', 0)} &#8226; Updated: {now}</text>
+                <text x="0" y="28" >Top languages: {top_langs_str}</text>
+                <text x="0" y="46" >Followers: {user.get('followers', 0)} &#8226; Updated: {now}</text>
             </g>
         </g>
     </svg>'''
