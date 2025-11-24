@@ -64,17 +64,18 @@ def render_svg(username, user, summary):
     top_langs_str = ', '.join(f'{l} ({c})' for l, c in summary['top_langs'])
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
         <rect width="100%" height="100%" rx="6" fill="#0f172a" />
+
         <g transform="translate(20,20)">
-            <text x="0" y="0" fill="#baffff">{username}</text>
-            <text x="0" y="22" fill="#9ddbca">{user.get('name','') or ''} &#8226; {user.get('bio','') or ''}</text>
+            <text x="0" y="0" fill="#7dd3fc" font-weight="600">{username}</text>
+            <text x="0" y="22" fill="#94a3b8">{user.get('name','') or ''} &#8226; {user.get('bio','') or ''}</text>
 
             <g transform="translate(0,48)">
-                <text x="0" y="0" fill="#daa520">Stars: {summary['stars']}</text>
-                <text x="160" y="0" fill="#daa520">Repos: {summary['repos']}</text>
-                <text x="320" y="0" fill="#daa520">Forks: {summary['forks']}</text>
+                <text x="0" y="0" fill="#facc15">Stars: {summary['stars']}</text>
+                <text x="160" y="0" fill="#facc15">Repos: {summary['repos']}</text>
+                <text x="320" y="0" fill="#facc15">Forks: {summary['forks']}</text>
 
-                <text x="0" y="28" fill="#0f7d7e">Top languages: {top_langs_str}</text>
-                <text x="0" y="46" fill="#0f7d7e">Followers: {user.get('followers', 0)} &#8226; Updated: {now}</text>
+                <text x="0" y="28" fill="#a5f3fc">Top languages: {top_langs_str}</text>
+                <text x="0" y="46" fill="#e2e8f0">Followers: {user.get('followers', 0)} &#8226; Updated: {now}</text>
             </g>
         </g>
     </svg>'''

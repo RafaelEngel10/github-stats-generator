@@ -17,7 +17,7 @@ The result is a file called **`stats.svg`**, perfect for embedding in your GitHu
   * Followers 
   * Top 3 languages 
   * Timestamp for last update 
-* Automatically uses your repository’s `GITHUB_TOKEN` (higher rate limits)
+* Automatically uses your repository’s `GH_TOKEN` (higher rate limits)
 * Fetches all repos using pagination
 * Fully customizable — colors, fonts, layout, data, everything!
 
@@ -64,7 +64,7 @@ The workflow triggers automatically after being pushed.
 Or for raw file via GitHub CDN:
 
 ```md
-![My GitHub Stats](https://raw.githubusercontent.com/<YOUR_USERNAME>/<REPO_NAME>/main/stats.svg)
+![My GitHub Stats](https://raw.githubusercontent.com/<USERNAME>/<REPOSITORY>/main/stats.svg)
 ```
 
 ---
