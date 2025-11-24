@@ -65,11 +65,11 @@ def render_svg(username, user, summary):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="540" height="160" viewBox="0 0 540 160">
         <rect width="100%" height="100%" rx="4" fill="#0f172a" />
 
-        <g transform="translate(30,30)">
+        <g transform="translate(35,35)">
             <text x="0" y="0" fill="#7dd3fc" font-weight="600">{username}</text>
             <text x="0" y="22" fill="#94a3b8">{user.get('name','') or ''} &#8226; {user.get('bio','') or ''}</text>
 
-            <g transform="translate(0,48)">
+            <g transform="translate(0,50)">
                 <text x="0" y="0" fill="#facc15">Stars: {summary['stars']}</text>
                 <text x="160" y="0" fill="#facc15">Repos: {summary['repos']}</text>
                 <text x="320" y="0" fill="#facc15">Forks: {summary['forks']}</text>
